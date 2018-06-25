@@ -1,0 +1,9 @@
+db:
+  image: mysql:latest
+  environment:
+    MYSQL_ROOT_PASSWORD: root
+    MYSQL_DATABASE: example_db
+    MYSQL_USER: root
+    MYSQL_PASSWORD: root
+  volumes:
+    - "./db:/docker-entrypoint-initdb.d"
